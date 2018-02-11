@@ -1,2 +1,65 @@
 /* Fonts */
-/* Color */
+/* Colors */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  /* Default font size 62,5% - 10px (10px/16px = 0,625) */
+  font-size: 62.5%; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800; }
+
+.wrapper {
+  width: 100%;
+  display: grid; }
+
+.navbar {
+  height: 17rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
+  .navbar__logo {
+    display: inline-block;
+    margin-left: 5rem;
+    justify-self: start;
+    width: 15rem;
+    height: auto; }
+  .navbar__list {
+    display: grid;
+    justify-content: space-between;
+    align-content: end;
+    grid-auto-flow: column;
+    width: 80rem;
+    padding: 0 2rem;
+    list-style: none; }
+  .navbar__listItem {
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 6px solid transparent; }
+  .navbar__listItem:hover, .navbar__listItem--active {
+    border-bottom: 6px solid #97d1eb; }
+  .navbar__link:link, .navbar__link:visited {
+    text-decoration: none;
+    font-size: 1.8rem;
+    outline: none; }
+  .navbar__link:active {
+    color: #000;
+    transform: scale(1.05); }
+  .navbar__search {
+    display: inline-block;
+    justify-self: end;
+    margin-right: 5rem; }
+  .navbar__searchIcon {
+    display: inline-block;
+    width: 2.8rem;
+    height: auto; }
