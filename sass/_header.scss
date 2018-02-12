@@ -1,0 +1,93 @@
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(24rem, 59rem) 1fr;
+
+  &__leftColumn {
+    display: grid;
+    justify-content: end;
+  }
+
+  &__numbers {
+    width: 24rem;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 2.51rem 1rem;
+    border-left: 1px solid rgba($gray-light, .2);
+  }
+
+  &__list {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 1.8rem;
+  }
+
+  &__listItem {
+    display: inline-block;
+  }
+
+  &__listItem--active {
+    text-decoration: line-through;
+  }
+
+  &__rightColumn {}
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__headline {
+    display: grid;
+    grid-template-columns: auto max-content;
+    grid-column-gap: 3.5rem
+
+
+  }
+
+  &__controls {
+    display: grid;
+    justify-items: center
+
+  }
+
+  &__arrow-box {
+    width: 7.5rem;
+    height: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba($gray-light, .2);
+    font-size: 3rem;
+    font-weight: 400;
+    color: $gray-light
+  }
+
+  &__picture-number {
+    width: 19rem;
+    height: 19rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    font-size: 7.2rem;
+    color: #fff;
+  }
+
+  &__text {
+    display: grid;
+    border-bottom: 1.5rem solid $blue
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    color: $gray-light;
+  }
+
+  &__title {
+    font-size: 9.2rem;
+  }
+}
