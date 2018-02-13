@@ -1,7 +1,8 @@
 .navbar {
   height: 17rem;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  // grid-template-columns: auto 1fr auto;
+  grid-template-columns: minmax(min-content, 59rem) 1fr auto;;
   align-items: center;
   justify-items: center;
   // max-width: 191rem;
@@ -18,11 +19,12 @@
   &__list {
     display: grid;
     justify-content: space-between;
+    justify-self: start;
     align-content: end;
     // justify-items: center;
     grid-auto-flow: column;
     width: 80rem;
-    padding: 0 2rem;
+    // padding: 0 2rem;
     list-style: none;
   }
   
@@ -45,6 +47,7 @@
     text-decoration: none;
     font-size: 1.8rem;
     outline: none;
+    color: #000;
   }
 
   
