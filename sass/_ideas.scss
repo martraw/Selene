@@ -1,0 +1,70 @@
+.ideas {
+  display: grid;
+  grid-template-columns: minmax(auto, 24rem) minmax(min-content, 1fr) minmax(max-content, 1fr);
+  grid-column-gap: 5rem;
+  height: 67rem;
+  max-height: 67rem;
+  border-bottom: 1px solid rgba($gray-light, .2);
+
+  &__textbox {
+    grid-column: 2/3;
+
+    display: grid;
+    align-content: center;
+
+    color: $gray-light;
+  }
+
+  &__textbox-title {
+    font-size: 7.2rem;
+    line-height: 4.8rem;
+    padding-bottom: 7rem;
+  }
+
+  &__textbox-paragraph {
+    font-family: $font-secondary;
+    font-size: 1.4rem;
+    line-height: 4.8rem;
+    text-align: justify;
+    // padding-right: 17rem;
+  }
+
+  &__imgbox {
+    display: grid;
+    align-content: center;
+    // justify-content: end;
+  }
+
+  &__imgbox-heading {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    align-self: center;
+    font-size: 9.2rem;
+    letter-spacing: 0.23rem;
+    z-index: 15;
+  }
+  
+  &__imgbox-content {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    justify-self: end;
+    position: relative;
+  }
+  
+  &__rectangle {
+    width: 100%;
+    height: 80%;
+    border: 2rem solid $blue;
+    border-right: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+}
