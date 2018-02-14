@@ -7,7 +7,7 @@
 
   &__leftColumn {
     display: grid;
-    grid-template-columns: [empty-start] minmax(0, 1fr) [empty-end numbers-start]  minmax(min-content, 35rem) [numbers-end];
+    grid-template-columns: [empty-start] 1fr [empty-end numbers-start]  minmax(min-content, 35rem) [numbers-end];
   }
 
   &__numbers {
