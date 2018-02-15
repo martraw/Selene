@@ -195,3 +195,48 @@ body {
   .ideas__img {
     display: block;
     width: 100%; }
+
+.gallery {
+  display: grid;
+  width: 100vw;
+  height: 70vh;
+  grid-template-columns: repeat(4, 25%);
+  background-color: #000; }
+  .gallery__image {
+    display: grid;
+    align-items: center;
+    position: relative; }
+  .gallery__image-box {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    height: 100%;
+    align-self: stretch;
+    background-position: center;
+    background-size: cover;
+    opacity: .3; }
+    .gallery__image-box--1 {
+      background-image: url(../img/gallery-01.jpg); }
+    .gallery__image-box--2 {
+      background-image: url(../img/gallery-02.jpg); }
+    .gallery__image-box--3 {
+      background-image: url(../img/gallery-03.jpg); }
+    .gallery__image-box--4 {
+      background-image: url(../img/gallery-04.jpg); }
+  .gallery__text {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    justify-self: center;
+    color: #fff;
+    font-size: 6rem;
+    z-index: 10; }
+  .gallery__image {
+    height: 100%; }
+  .gallery__active {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    justify-self: center;
+    align-self: center;
+    border: 2rem solid #97d1eb;
+    width: 90%;
+    height: 95%;
+    z-index: 9; }
