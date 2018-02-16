@@ -198,7 +198,6 @@ body {
 
 .gallery {
   display: grid;
-  width: 100vw;
   height: 70vh;
   grid-template-columns: repeat(4, 25%);
   background-color: #000; }
