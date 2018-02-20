@@ -248,11 +248,11 @@ body {
   background-position: center; }
 
 .work {
-  display: grid;
-  align-content: center; }
+  display: grid; }
   .work__title {
     justify-self: center;
     grid-column: 1/-1;
+    padding-top: 5rem;
     display: grid;
     grid-auto-flow: column;
     grid-column-gap: 2rem;
@@ -288,3 +288,12 @@ body {
     font-size: 16rem;
     text-shadow: 0 0 5.5rem rgba(14, 17, 25, 0.15);
     color: #fff; }
+
+.latest {
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, 150rem) 1fr;
+  height: 50rem; }
+  .latest__img {
+    display: none; }
+  .latest__img--active {
+    display: block; }
