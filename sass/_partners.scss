@@ -1,0 +1,9 @@
+.partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max-content, 10rem));
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 20rem;
+  grid-gap: 10rem;
+}
