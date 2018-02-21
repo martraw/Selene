@@ -202,4 +202,24 @@
     justify-self: start;
   }
 
+  &__thumbnails {
+    grid-row: -1/span 1;
+    grid-column: middle-start/middle-end;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-gap: 3rem;
+    padding: 3rem;
+    background-color: #fff;
+    border-bottom: 1px solid rgba($gray-light, .2);
+  
+  }
+  &__thumbnail {
+    width: 22rem;
+    height: 14rem;
+  }
+
+  &__thumbnail--active {
+    border: 1.5rem solid $blue;
+  }
 }

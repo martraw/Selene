@@ -373,3 +373,18 @@ body {
     padding: 1.5rem 4rem;
     border: 1px solid #9ca2b4;
     justify-self: start; }
+  .latest__thumbnails {
+    grid-row: -1/span 1;
+    grid-column: middle-start/middle-end;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-gap: 3rem;
+    padding: 3rem;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
+  .latest__thumbnail {
+    width: 22rem;
+    height: 14rem; }
+  .latest__thumbnail--active {
+    border: 1.5rem solid #97d1eb; }
