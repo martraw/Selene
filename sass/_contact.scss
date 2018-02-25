@@ -76,10 +76,15 @@
     outline: none;
     box-shadow: 0 1rem 2rem rgba(black, .1);
   }
+  
+  &__input::placeholder, &__textarea::placeholder {
+    color: $gray-light;
+  }
 
   &__input::-webkit-input-placeholder {
     color: $gray-light;
   }
+
 
   &__label {}
 
