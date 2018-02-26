@@ -7,34 +7,52 @@
     height: 96rem;
 
     display: grid;
-    grid-template-columns: 60% 40%;
+    // grid-template-columns: 60% 40%;
+    background: url(../img/form-img.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40% 100%;
   }
 
   &__content {
+    justify-self: center;
+    align-self: center;
+    width: 95%;
+    height: 95%;
+    border: 2rem solid $blue;
+
     display: grid;
-    justify-content: center;
-    align-content: center;
+    grid-template-columns: 60% 40%;
+
+    // grid-column: 1/2;
+    // grid-row: 1/2;
+    // display: grid;
+    // justify-content: center;
+    // align-content: center;
   }
 
   &__form {
-    
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    align-content: center;
   }
 
   &__form-header {
     height: 10rem;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     
   }
 
   &__list {
     list-style: none;
-    width: 36.9rem;
     color: $gray-light;
     font-size: 1.6rem;
     text-transform: uppercase;
-    letter-spacing: 0.04rem;
-    display: inline-block
+    letter-spacing: 0.4rem;
+    display: inline-block;
+    margin-left: 9rem;
   }
 
   &__list-item {
@@ -62,14 +80,18 @@
   }
 
   &__input, &__textarea {
-    width: 64rem;
+    width: 80%;
     font-size: 3.6rem;
     font-family: inherit;
     font-weight: bold;
     display: block;
     border: none;
     border-bottom: 1px solid $gray-light;
+    margin-left: 9rem;
+  }
 
+  &__textarea {
+    font-size: 2.4rem;
   }
 
   &__input:focus, &__textarea:focus {
@@ -85,17 +107,31 @@
     color: $gray-light;
   }
 
+  &__btn {
+    justify-self: center;
+    width: 18.4rem;
+    height: 5.1rem;
+    border:1px solid $gray-light;
+    background-color: #fff;
+    color: $gray;
+    font-family: Montserrat;
+    font-size: 1.4rem;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+  }
+
 
   &__label {}
 
-  &__textarea {}
 
-  &__img {
+  &__border {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    justify-self: center;
+    align-self: center;
+    width: 95%;
+    height: 95%;
+    border: 2rem solid $blue;
   }
-
-  &__image {
-    width: 100%
-  }
-
-  &__border {}
 }

@@ -405,23 +405,34 @@ body {
     width: 153rem;
     height: 96rem;
     display: grid;
-    grid-template-columns: 60% 40%; }
+    background: url(../img/form-img.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 40% 100%; }
   .contact__content {
+    justify-self: center;
+    align-self: center;
+    width: 95%;
+    height: 95%;
+    border: 2rem solid #97d1eb;
     display: grid;
-    justify-content: center;
+    grid-template-columns: 60% 40%; }
+  .contact__form {
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
     align-content: center; }
   .contact__form-header {
     height: 10rem;
-    display: flex;
-    justify-content: center; }
+    display: flex; }
   .contact__list {
     list-style: none;
-    width: 36.9rem;
     color: #bcc0cd;
     font-size: 1.6rem;
     text-transform: uppercase;
-    letter-spacing: 0.04rem;
-    display: inline-block; }
+    letter-spacing: 0.4rem;
+    display: inline-block;
+    margin-left: 9rem; }
   .contact__list-item {
     display: inline-block; }
   .contact__list-item:not(:last-child) {
@@ -437,13 +448,16 @@ body {
   .contact__form-group {
     padding-bottom: 4rem; }
   .contact__input, .contact__textarea {
-    width: 64rem;
+    width: 80%;
     font-size: 3.6rem;
     font-family: inherit;
     font-weight: bold;
     display: block;
     border: none;
-    border-bottom: 1px solid #bcc0cd; }
+    border-bottom: 1px solid #bcc0cd;
+    margin-left: 9rem; }
+  .contact__textarea {
+    font-size: 2.4rem; }
   .contact__input:focus, .contact__textarea:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); }
@@ -451,5 +465,23 @@ body {
     color: #bcc0cd; }
   .contact__input::-webkit-input-placeholder {
     color: #bcc0cd; }
-  .contact__image {
-    width: 100%; }
+  .contact__btn {
+    justify-self: center;
+    width: 18.4rem;
+    height: 5.1rem;
+    border: 1px solid #bcc0cd;
+    background-color: #fff;
+    color: #9ca2b4;
+    font-family: Montserrat;
+    font-size: 1.4rem;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem; }
+  .contact__border {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    justify-self: center;
+    align-self: center;
+    width: 95%;
+    height: 95%;
+    border: 2rem solid #97d1eb; }
