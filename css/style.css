@@ -395,12 +395,13 @@ body {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  height: 20rem;
+  padding: 10rem 0;
   grid-gap: 10rem; }
 
 .contact {
   display: grid;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 7rem; }
   .contact__container {
     width: 153rem;
     height: 96rem;
@@ -501,3 +502,16 @@ body {
     width: 95%;
     height: 95%;
     border: 2rem solid #97d1eb; }
+
+.footer {
+  height: 30rem;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #9ca2b4;
+  font-size: 1.4rem; }
+  .footer span {
+    font-size: 1.8rem;
+    padding-top: 1rem; }
