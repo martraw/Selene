@@ -469,6 +469,17 @@ body {
     color: #bcc0cd; }
   .contact__input::-webkit-input-placeholder {
     color: #bcc0cd; }
+  .contact__label {
+    margin-left: 9rem;
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.6rem;
+    transition: all .1s;
+    color: #bcc0cd; }
+  .contact__input:placeholder-shown + .contact__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
   .contact__btn {
     justify-self: center;
     width: 18rem;

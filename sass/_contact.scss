@@ -108,6 +108,21 @@
   &__input::-webkit-input-placeholder {
     color: $gray-light;
   }
+  
+  &__label {
+    margin-left: 9rem;
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.6rem;
+    transition: all .1s;
+    color: $gray-light;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
 
   &__btn {
     justify-self: center;
@@ -125,7 +140,6 @@
   }
 
 
-  &__label {}
 
 
   &__border {
