@@ -1,0 +1,20 @@
+/* MEDIA QUERY SETTINGS
+
+0 - 600px         phone
+600 - 900px       tablet-portrait
+900 - 1200px      tablet-landscape
+
+
+xxx - 1600px      laptop
+[1600 - 1920px]   desktop - normalne style 
+1800px +          big desktop
+*/
+
+@mixin media($breakepoint) {
+  
+  @if ($breakepoint == laptop) {
+    @media only screen and (max-width: 100em) {@content}
+  };
+
+  
+}

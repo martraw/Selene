@@ -1,5 +1,16 @@
 /* Fonts */
 /* Colors */
+/* MEDIA QUERY SETTINGS
+
+0 - 600px         phone
+600 - 900px       tablet-portrait
+900 - 1200px      tablet-landscape
+
+
+xxx - 1600px      laptop
+[1600 - 1920px]   desktop - normalne style 
+1800px +          big desktop
+*/
 *,
 *::before,
 *::after {
@@ -11,6 +22,9 @@ html {
   box-sizing: border-box;
   /* Default font size 62,5% - 10px (10px/16px = 0,625) */
   font-size: 62.5%; }
+  @media only screen and (max-width: 100em) {
+    html {
+      font-size: 56.25%; } }
 
 body {
   font-family: "Raleway", sans-serif;
@@ -298,6 +312,9 @@ body {
     grid-column: middle-start/middle-end;
     grid-row: 1/-1;
     background-color: #fff; }
+    @media only screen and (max-width: 100em) {
+      .latest__project-box {
+        grid-column: full-start/full-end-end; } }
   .latest__title {
     grid-column: middle-start/middle-end;
     grid-row: 1/2;
@@ -360,6 +377,9 @@ body {
     grid-row-gap: 2rem;
     align-content: center;
     padding-left: 10rem; }
+    @media only screen and (max-width: 100em) {
+      .latest__project-description {
+        grid-column: middle-middle/full-end; } }
   .latest__project-header {
     font-size: 4.8rem;
     line-height: 6rem;
@@ -369,6 +389,9 @@ body {
     font-family: Montserrat;
     font-size: 1.4rem;
     line-height: 4.8rem; }
+    @media only screen and (max-width: 100em) {
+      .latest__project-details {
+        padding-right: 5rem; } }
   .latest__project-link {
     padding: 1.5rem 4rem;
     border: 1px solid #9ca2b4;
