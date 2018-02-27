@@ -225,6 +225,10 @@
     padding: 3rem;
     background-color: #fff;
     border-bottom: 1px solid rgba($gray-light, .2);
+
+    @include media(laptop) {
+      grid-column: full-start/full-end;  
+      }
   
   }
   &__thumbnail {

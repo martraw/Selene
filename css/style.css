@@ -24,7 +24,12 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 100em) {
     html {
+      /* Font size 9px */
       font-size: 56.25%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      /* Font size 8px */
+      font-size: 50%; } }
 
 body {
   font-family: "Raleway", sans-serif;
@@ -142,6 +147,12 @@ body {
   .header__title {
     font-size: 9.2rem;
     letter-spacing: 0.23rem; }
+    @media only screen and (max-width: 100em) {
+      .header__title {
+        font-size: 8rem; } }
+    @media only screen and (max-width: 75em) {
+      .header__title {
+        font-size: 7rem; } }
   .header__list {
     display: flex;
     flex: 1;
@@ -165,12 +176,13 @@ body {
   display: grid;
   grid-template-columns: minmax(auto, 24rem) minmax(min-content, 1fr) minmax(max-content, 1fr);
   grid-column-gap: 5rem;
-  height: 67rem;
   max-height: 67rem;
+  margin: 10rem 0 13rem 0;
   border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
   @media only screen and (max-width: 100em) {
     .ideas {
-      grid-template-columns: minmax(min-content, 1fr) minmax(max-content, 1fr); } }
+      grid-template-columns: minmax(min-content, 1fr) minmax(max-content, 1fr);
+      margin: 8rem 0 10rem 0; } }
   .ideas__textbox {
     grid-column: 2/3;
     display: grid;
@@ -184,6 +196,12 @@ body {
     font-size: 7.2rem;
     line-height: 4.8rem;
     padding-bottom: 7rem; }
+    @media only screen and (max-width: 100em) {
+      .ideas__textbox-title {
+        font-size: 6rem; } }
+    @media only screen and (max-width: 75em) {
+      .ideas__textbox-title {
+        font-size: 5rem; } }
   .ideas__textbox-paragraph {
     font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
@@ -199,6 +217,12 @@ body {
     font-size: 9.2rem;
     letter-spacing: 0.23rem;
     z-index: 15; }
+    @media only screen and (max-width: 100em) {
+      .ideas__imgbox-heading {
+        font-size: 8rem; } }
+    @media only screen and (max-width: 75em) {
+      .ideas__imgbox-heading {
+        font-size: 7rem; } }
   .ideas__imgbox-content {
     grid-row: 1/-1;
     grid-column: 1/-1;
@@ -413,6 +437,9 @@ body {
     padding: 3rem;
     background-color: #fff;
     border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
+    @media only screen and (max-width: 100em) {
+      .latest__thumbnails {
+        grid-column: full-start/full-end; } }
   .latest__thumbnail {
     width: 22rem;
     height: 14rem; }
@@ -440,6 +467,10 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     background-size: 40% 100%; }
+    @media only screen and (max-width: 100em) {
+      .contact__container {
+        width: 95vw;
+        height: auto; } }
   .contact__content {
     justify-self: center;
     align-self: center;
@@ -452,7 +483,8 @@ body {
     display: grid;
     grid-auto-flow: row;
     align-items: center;
-    align-content: center; }
+    align-content: center;
+    margin: 10% 0; }
   .contact__form-header {
     height: 10rem;
     display: flex; }

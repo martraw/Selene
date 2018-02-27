@@ -11,10 +11,14 @@ xxx - 1600px      laptop
 */
 
 @mixin media($breakepoint) {
+
+  @if ($breakepoint == tab-land) {
+    @media only screen and (max-width: 75em) {@content}
+  };
   
   @if ($breakepoint == laptop) {
     @media only screen and (max-width: 100em) {@content}
   };
 
-  
+
 }

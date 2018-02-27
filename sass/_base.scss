@@ -12,7 +12,13 @@ html {
   font-size: 62.5%; 
 
   @include media(laptop) {
+/* Font size 9px */
     font-size: 56.25%;
+  }
+
+  @include media(tab-land) {
+/* Font size 8px */
+    font-size: 50%;
   }
 }
 

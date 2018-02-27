@@ -12,6 +12,11 @@
     background-repeat: no-repeat;
     background-position: right;
     background-size: 40% 100%;
+
+    @include media(laptop) {
+      width: 95vw; 
+      height: auto;
+      }
   }
 
   &__content {
@@ -31,12 +36,12 @@
     grid-auto-flow: row;
     align-items: center;
     align-content: center;
+    margin: 10% 0;
   }
 
   &__form-header {
     height: 10rem;
     display: flex;
-    // justify-content: center;
     
   }
 

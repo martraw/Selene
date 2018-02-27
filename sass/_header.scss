@@ -77,6 +77,14 @@
   &__title {
     font-size: 9.2rem;
     letter-spacing: 0.23rem;
+
+    @include media (laptop) {
+      font-size: 8rem;
+    }
+
+    @include media (tab-land) {
+      font-size: 7rem;
+    }
   }
 
   &__list {

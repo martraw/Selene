@@ -2,12 +2,14 @@
   display: grid;
   grid-template-columns: minmax(auto, 24rem) minmax(min-content, 1fr) minmax(max-content, 1fr);
   grid-column-gap: 5rem;
-  height: 67rem;
+  // height: 67rem;
   max-height: 67rem;
+  margin: 10rem 0 13rem 0;
   border-bottom: 1px solid rgba($gray-light, .2);
 
   @include media(laptop) {
     grid-template-columns: minmax(min-content, 1fr) minmax(max-content, 1fr);
+    margin: 8rem 0 10rem 0;
   }
 
   &__textbox {
@@ -26,6 +28,14 @@
     font-size: 7.2rem;
     line-height: 4.8rem;
     padding-bottom: 7rem;
+
+    @include media (laptop) {
+      font-size: 6rem;
+    }
+
+    @include media (tab-land) {
+      font-size: 5rem;
+    }
   }
 
   &__textbox-paragraph {
@@ -49,6 +59,14 @@
     font-size: 9.2rem;
     letter-spacing: 0.23rem;
     z-index: 15;
+
+    @include media (laptop) {
+      font-size: 8rem;
+    }
+
+    @include media (tab-land) {
+      font-size: 7rem;
+    }
   }
   
   &__imgbox-content {
