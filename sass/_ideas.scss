@@ -6,13 +6,20 @@
   max-height: 67rem;
   border-bottom: 1px solid rgba($gray-light, .2);
 
+  @include media(laptop) {
+    grid-template-columns: minmax(min-content, 1fr) minmax(max-content, 1fr);
+  }
+
   &__textbox {
     grid-column: 2/3;
-
     display: grid;
     align-content: center;
-
     color: $gray-light;
+
+    @include media(laptop) {
+      grid-column: 1/2;
+      padding-left: 5rem;
+    }
   }
 
   &__textbox-title {
