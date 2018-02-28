@@ -183,23 +183,32 @@ body {
 .ideas {
   display: grid;
   grid-template-columns: minmax(auto, 24rem) minmax(min-content, 1fr) minmax(max-content, 1fr);
+  grid-template-areas: ". text image";
   grid-column-gap: 5rem;
-  max-height: 67rem;
-  margin: 10rem 0 13rem 0;
+  margin-top: 10rem;
+  margin-bottom: 13rem;
   border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
   @media only screen and (max-width: 100em) {
     .ideas {
       grid-template-columns: minmax(min-content, 1fr) minmax(max-content, 1fr);
-      margin: 8rem 0 10rem 0; } }
+      grid-template-areas: "text image"; } }
+  @media only screen and (max-width: 75em) {
+    .ideas {
+      grid-template-columns: minmax(min-content, 1fr);
+      grid-template-areas: "image" "text";
+      margin-top: 5rem;
+      margin-bottom: 0; } }
   .ideas__textbox {
-    grid-column: 2/3;
+    grid-area: text;
     display: grid;
     align-content: center;
     color: #bcc0cd; }
     @media only screen and (max-width: 100em) {
       .ideas__textbox {
-        grid-column: 1/2;
-        padding-left: 5rem; } }
+        padding: 5rem; } }
+    @media only screen and (max-width: 75em) {
+      .ideas__textbox {
+        margin-bottom: 5rem; } }
   .ideas__textbox-title {
     font-size: 7.2rem;
     line-height: 4.8rem;
@@ -209,13 +218,15 @@ body {
         font-size: 6rem; } }
     @media only screen and (max-width: 75em) {
       .ideas__textbox-title {
-        font-size: 5rem; } }
+        font-size: 5rem;
+        text-align: center; } }
   .ideas__textbox-paragraph {
     font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
     line-height: 4.8rem;
     text-align: justify; }
   .ideas__imgbox {
+    grid-area: image;
     display: grid;
     align-content: center; }
   .ideas__imgbox-heading {
@@ -230,7 +241,8 @@ body {
         font-size: 8rem; } }
     @media only screen and (max-width: 75em) {
       .ideas__imgbox-heading {
-        font-size: 7rem; } }
+        font-size: 7rem;
+        text-align: center; } }
   .ideas__imgbox-content {
     grid-row: 1/-1;
     grid-column: 1/-1;
