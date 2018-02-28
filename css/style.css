@@ -4,10 +4,10 @@
 
 0 - 600px         phone
 600 - 900px       tablet-portrait
-900 - 1200px      tablet-landscape
 
 
-xxx - 1600px      laptop
+XXX - 1200px      tablet-landscape
+1200 - 1600px     laptop
 [1600 - 1920px]   desktop - normalne style 
 1800px +          big desktop
 */
@@ -47,6 +47,9 @@ body {
   align-items: center;
   justify-items: center;
   border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
+  @media only screen and (max-width: 75em) {
+    .navbar {
+      grid-template-columns: auto minmax(min-content, 1fr) auto; } }
   .navbar__logo {
     display: inline-block;
     margin-left: 5rem;
@@ -63,6 +66,9 @@ body {
     max-width: 80rem;
     padding-right: 2rem;
     list-style: none; }
+    @media only screen and (max-width: 75em) {
+      .navbar__list {
+        justify-self: center; } }
   .navbar__listItem {
     line-height: 3rem;
     display: flex;

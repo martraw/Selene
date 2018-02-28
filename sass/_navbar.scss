@@ -7,6 +7,11 @@
   justify-items: center;
   border-bottom: 1px solid rgba($gray-light, .2);
 
+  @include media(tab-land) {
+  grid-template-columns: auto minmax(min-content,1fr) auto;
+    
+  }
+
   &__logo {
     display: inline-block;
     margin-left: 5rem;
@@ -26,6 +31,11 @@
     max-width: 80rem;
     padding-right: 2rem;
     list-style: none;
+
+    @include media(tab-land) {
+    justify-self: center;
+        
+      }
   }
   
   &__listItem {
