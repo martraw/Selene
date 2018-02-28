@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  min-height: 50rem;
   display: grid;
   grid-template-columns: [full-start]  minmax(min-content, 59rem) [image-start]  1fr [image-end full-end];
   border-bottom: 1px solid rgba($gray-light, .2);
@@ -115,6 +116,7 @@
   &__img--active {
     display: block;
     width: 100%;
+    height: 100%;
   }
  
 }
