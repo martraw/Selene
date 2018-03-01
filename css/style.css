@@ -99,6 +99,9 @@ body {
   display: grid;
   grid-template-columns: [full-start] minmax(min-content, 59rem) [image-start] 1fr [image-end full-end];
   border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
+  @media only screen and (max-width: 75em) {
+    .header {
+      grid-template-columns: [full-start] max-content [image-start] 1fr [image-end full-end]; } }
   .header__leftColumn {
     display: grid;
     grid-template-columns: [empty-start] 1fr [empty-end numbers-start] minmax(min-content, 35rem) [numbers-end]; }
@@ -111,19 +114,28 @@ body {
     align-items: flex-end;
     padding: 2.5rem 1rem;
     border-left: 1px solid rgba(188, 192, 205, 0.2); }
+    @media only screen and (max-width: 75em) {
+      .header__numbers {
+        grid-column: empty-start/numbers-end; } }
   .header__headline {
+    grid-column: numbers-start/numbers-end;
     display: grid;
     grid-template-columns: auto max-content;
     grid-row: 1/2;
-    grid-column: numbers-start/numbers-end;
     grid-column-gap: 3.5rem;
     align-content: center;
     margin-left: -9.5rem;
     width: 35rem;
     z-index: 1; }
+    @media only screen and (max-width: 75em) {
+      .header__headline {
+        margin-left: 0; } }
   .header__controls {
     display: grid;
     justify-items: center; }
+    @media only screen and (max-width: 75em) {
+      .header__controls {
+        margin-left: 7.5rem; } }
   .header__arrow-box {
     width: 7.5rem;
     height: 7.5rem;
