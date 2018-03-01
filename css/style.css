@@ -103,6 +103,10 @@ body {
   @media only screen and (max-width: 75em) {
     .header {
       grid-template-columns: [full-start] max-content [image-start] 1fr [image-end full-end]; } }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      grid-template-rows: auto auto;
+      grid-template-areas: "rightCol rightCol" "leftCol leftCol"; } }
   .header__leftColumn {
     grid-area: leftCol;
     display: grid;
@@ -111,10 +115,16 @@ body {
     @media only screen and (max-width: 75em) {
       .header__leftColumn {
         grid-template-columns: [empty-end numbers-start] minmax(min-content, 35rem) [numbers-end]; } }
+    @media only screen and (max-width: 75em) {
+      .header__leftColumn {
+        grid-template-columns: [numbers-start] minmax(min-content, 35rem) [numbers-end] 1fr [full-end]; } }
   .header__numbers {
     grid-column: numbers-start/numbers-end;
     padding: 2.5rem 1rem;
     border-left: 1px solid rgba(188, 192, 205, 0.2); }
+    @media only screen and (max-width: 56.25em) {
+      .header__numbers {
+        display: none; } }
   .header__headline {
     grid-column: numbers-start/numbers-end;
     display: grid;
@@ -127,6 +137,9 @@ body {
     @media only screen and (max-width: 75em) {
       .header__headline {
         margin-left: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__headline {
+        display: none; } }
   .header__controls {
     display: grid;
     justify-items: center; }
@@ -145,6 +158,18 @@ body {
     color: #bcc0cd;
     background-color: #fff;
     cursor: pointer; }
+  .header__arrow-box--mobile {
+    display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .header__arrow-box--mobile {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%); }
+        .header__arrow-box--mobile-left {
+          left: 0; }
+        .header__arrow-box--mobile-right {
+          right: 0; } }
   .header__picture-number {
     width: 19rem;
     height: 19rem;
@@ -181,7 +206,8 @@ body {
     text-decoration: line-through; }
   .header__rightColumn {
     grid-area: rightCol;
-    grid-column: image-start/image-end; }
+    grid-column: image-start/image-end;
+    position: relative; }
   .header__img {
     display: none; }
   .header__img--active {

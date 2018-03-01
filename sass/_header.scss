@@ -3,13 +3,18 @@
   min-height: 80rem;
   display: grid;
   grid-template-columns: [full-start]  minmax(min-content, 59rem) [image-start]  1fr [image-end full-end];
-  // grid-template-rows: auto auto;
   grid-template-areas:  "leftCol rightCol";
-
+  
   border-bottom: 1px solid rgba($gray-light, .2);
   
   @include media(tab-land) {
     grid-template-columns: [full-start]  max-content [image-start]  1fr [image-end full-end];
+  }
+  
+  @include media(tab-port) {
+    grid-template-rows: auto auto;
+    grid-template-areas:  "rightCol rightCol"
+                          "leftCol leftCol";
   }
 
   &__leftColumn {
@@ -19,7 +24,11 @@
     grid-template-rows: 1fr min-content;
 
     @include media(tab-land) {
-    grid-template-columns: [empty-end numbers-start]  minmax(min-content, 35rem) [numbers-end];
+      grid-template-columns: [empty-end numbers-start]  minmax(min-content, 35rem) [numbers-end];
+    }
+
+    @include media(tab-land) {
+      grid-template-columns: [numbers-start]  minmax(min-content, 35rem) [numbers-end] 1fr [full-end];
      
     }
   }
@@ -35,8 +44,9 @@
     padding: 2.5rem 1rem;
     border-left: 1px solid rgba($gray-light, .2);
 
-    @include media(tab-land) {
-      // grid-column: empty-start/numbers-end;
+    @include media(tab-port) {
+      // grid-column: numbers-start/full-end;
+      display: none;
     }
   }
 
@@ -52,8 +62,12 @@
     z-index: 1;
 
     @include media(tab-land) {
-      // grid-column: empty-start/numbers-end; !!!!
       margin-left: 0;
+    }
+    
+    @include media(tab-port) {
+      // grid-column: numbers-end/full-end;
+      display: none;
     }
   }
 
@@ -63,6 +77,10 @@
 
     @include media(tab-land) {
       margin-left: 7.5rem;
+    }
+
+    @include media(tab-port) {
+      // display: none;
     }
   }
 
@@ -79,6 +97,26 @@
     background-color: #fff;
     cursor: pointer;
   }
+
+ &__arrow-box--mobile {
+   display: none;
+
+   @include media(tab-port) {
+     display: flex;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+    
+       &-left {
+         left: 0;
+       }
+     
+        &-right {
+         right: 0;
+       }
+    }
+ }
+
 
   &__picture-number {
     width: 19rem;
@@ -134,6 +172,7 @@
     grid-area: rightCol;
     // grid-row: 1/2;
     grid-column: image-start/image-end;
+    position: relative;
   }
 
   &__img {
