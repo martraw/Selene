@@ -12,6 +12,10 @@ XXX - 1200px      tablet-landscape
 
 @mixin media($breakepoint) {
 
+  @if ($breakepoint == tab-port) {
+    @media only screen and (max-width: 56.25em) {@content}
+  };
+
   @if ($breakepoint == tab-land) {
     @media only screen and (max-width: 75em) {@content}
   };
