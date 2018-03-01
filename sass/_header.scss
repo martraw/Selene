@@ -3,6 +3,9 @@
   min-height: 80rem;
   display: grid;
   grid-template-columns: [full-start]  minmax(min-content, 59rem) [image-start]  1fr [image-end full-end];
+  // grid-template-rows: auto auto;
+  grid-template-areas:  "leftCol rightCol";
+
   border-bottom: 1px solid rgba($gray-light, .2);
   
   @include media(tab-land) {
@@ -10,6 +13,7 @@
   }
 
   &__leftColumn {
+    grid-area: leftCol;
     display: grid;
     grid-template-columns: [empty-start] 1fr [empty-end numbers-start]  minmax(min-content, 35rem) [numbers-end];
     grid-template-rows: 1fr min-content;
@@ -127,7 +131,8 @@
   }
 
   &__rightColumn {
-    grid-row: 1/2;
+    grid-area: rightCol;
+    // grid-row: 1/2;
     grid-column: image-start/image-end;
   }
 

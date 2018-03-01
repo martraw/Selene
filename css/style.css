@@ -98,11 +98,13 @@ body {
   min-height: 80rem;
   display: grid;
   grid-template-columns: [full-start] minmax(min-content, 59rem) [image-start] 1fr [image-end full-end];
+  grid-template-areas: "leftCol rightCol";
   border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
   @media only screen and (max-width: 75em) {
     .header {
       grid-template-columns: [full-start] max-content [image-start] 1fr [image-end full-end]; } }
   .header__leftColumn {
+    grid-area: leftCol;
     display: grid;
     grid-template-columns: [empty-start] 1fr [empty-end numbers-start] minmax(min-content, 35rem) [numbers-end];
     grid-template-rows: 1fr min-content; }
@@ -178,7 +180,7 @@ body {
   .header__listItem--active {
     text-decoration: line-through; }
   .header__rightColumn {
-    grid-row: 1/2;
+    grid-area: rightCol;
     grid-column: image-start/image-end; }
   .header__img {
     display: none; }
