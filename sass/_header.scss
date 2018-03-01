@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  min-height: 50rem;
+  min-height: 80rem;
   display: grid;
   grid-template-columns: [full-start]  minmax(min-content, 59rem) [image-start]  1fr [image-end full-end];
   border-bottom: 1px solid rgba($gray-light, .2);
@@ -12,24 +12,27 @@
   &__leftColumn {
     display: grid;
     grid-template-columns: [empty-start] 1fr [empty-end numbers-start]  minmax(min-content, 35rem) [numbers-end];
+    grid-template-rows: 1fr min-content;
 
     @include media(tab-land) {
+    grid-template-columns: [empty-end numbers-start]  minmax(min-content, 35rem) [numbers-end];
      
     }
   }
 
   &__numbers {
-    grid-row: 1/2;
+    // grid-row: 1/2;
     grid-column: numbers-start/numbers-end;
-    height: 100%;
-    display: flex;
-    flex: 1;
-    align-items: flex-end;
+    // height: 100%;
+    // display: flex;
+    // flex: 1;
+    // align-items: flex-end;
+
     padding: 2.5rem 1rem;
     border-left: 1px solid rgba($gray-light, .2);
 
     @include media(tab-land) {
-      grid-column: empty-start/numbers-end;
+      // grid-column: empty-start/numbers-end;
     }
   }
 
@@ -37,7 +40,7 @@
     grid-column: numbers-start/numbers-end;
     display: grid;
     grid-template-columns: auto max-content;
-    grid-row: 1/2;
+    // grid-row: 1/2;
     grid-column-gap: 3.5rem;
     align-content: center;
     margin-left: -9.5rem;
