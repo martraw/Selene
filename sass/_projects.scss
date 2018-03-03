@@ -37,22 +37,26 @@
     width: 19rem;
     height: 2px;
     background-color: $green;
+
+    @include media(tab-port) {
+      width: 10rem;
+    }
   }
 
   &__content {
     display: grid;
     // grid-auto-flow: column;
     // grid-template-columns: repeat(3, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 5rem;
-    // justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+    
+    grid-gap: 3rem;
+    justify-content: center;
 
   }
 
   &__box {
     display: grid;
     grid-auto-flow: column;
-    // grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -65,6 +69,10 @@
     grid-column: 1/-1;
     grid-row: 1/-1;
     z-index: 10;
+
+    @include media(tab-port) {
+      font-size: 4.5rem;
+    }
   }
 
   &__box-number {
@@ -74,6 +82,10 @@
     font-size: 20rem;
     text-shadow: 0 0 5.5rem rgba(14, 17, 25, 0.15);
     color: #fff;
+
+    @include media(tab-port) {
+      font-size: 15rem;
+    }
   }
 }
 
@@ -143,6 +155,10 @@
     width: 19rem;
     height: 2px;
     background-color: $green;
+
+    @include media(tab-port) {
+      width: 10rem;
+    }
   }
 
 
@@ -281,11 +297,11 @@
       grid-column: full-start/full-end;  
      }
 
-    //  @include media(tab-port) {
-    //    grid-auto-flow: row;
-    //    grid-template-columns: repeat(2, 1fr);
-    //    justify-items: center;
-    //  }
+     @include media(tab-port) {
+       grid-auto-flow: row;
+       grid-template-columns: repeat(2, 1fr);
+       justify-items: center;
+     }
 
       
   
@@ -302,5 +318,9 @@
 
   &__thumbnail--active {
     border: 1.5rem solid $blue;
+
+    @include media(tab-port) {
+      border: 1rem solid $blue;
+     }
   }
 }

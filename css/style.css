@@ -122,6 +122,7 @@ body {
         grid-template-rows: 1fr;
         justify-self: center;
         align-self: center;
+        justify-content: center;
         margin-bottom: 3rem;
         z-index: 5; } }
   .header__numbers {
@@ -399,10 +400,14 @@ body {
     width: 19rem;
     height: 2px;
     background-color: #97d1eb; }
+    @media only screen and (max-width: 56.25em) {
+      .work__title::before, .work__title::after {
+        width: 10rem; } }
   .work__content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 5rem; }
+    grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+    grid-gap: 3rem;
+    justify-content: center; }
   .work__box {
     display: grid;
     grid-auto-flow: column;
@@ -414,6 +419,9 @@ body {
     grid-column: 1/-1;
     grid-row: 1/-1;
     z-index: 10; }
+    @media only screen and (max-width: 56.25em) {
+      .work__box-text {
+        font-size: 4.5rem; } }
   .work__box-number {
     grid-column: 1/-1;
     grid-row: 1/-1;
@@ -421,6 +429,9 @@ body {
     font-size: 20rem;
     text-shadow: 0 0 5.5rem rgba(14, 17, 25, 0.15);
     color: #fff; }
+    @media only screen and (max-width: 56.25em) {
+      .work__box-number {
+        font-size: 15rem; } }
 
 .latest {
   min-height: 50rem;
@@ -460,6 +471,9 @@ body {
     width: 19rem;
     height: 2px;
     background-color: #97d1eb; }
+    @media only screen and (max-width: 56.25em) {
+      .latest__title::before, .latest__title::after {
+        width: 10rem; } }
   .latest__slider {
     grid-area: slider;
     display: grid; }
@@ -552,6 +566,11 @@ body {
     @media only screen and (max-width: 100em) {
       .latest__thumbnails {
         grid-column: full-start/full-end; } }
+    @media only screen and (max-width: 56.25em) {
+      .latest__thumbnails {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center; } }
   .latest__thumbnail {
     width: 22rem;
     height: 14rem; }
@@ -561,6 +580,9 @@ body {
         height: 11.45rem; } }
   .latest__thumbnail--active {
     border: 1.5rem solid #97d1eb; }
+    @media only screen and (max-width: 56.25em) {
+      .latest__thumbnail--active {
+        border: 1rem solid #97d1eb; } }
 
 .partners {
   display: grid;
