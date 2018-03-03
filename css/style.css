@@ -375,7 +375,6 @@ body {
 
 .projects {
   display: grid;
-  min-height: 100Vh;
   background-image: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.99) 15%, rgba(255, 255, 255, 0.98) 30%), url("../img/background-large.jpg");
   background-size: cover;
   background-position: center; }
@@ -464,32 +463,45 @@ body {
   .latest__slider {
     grid-area: slider;
     display: grid; }
-  .latest__controls {
-    grid-row: 1/-1;
-    grid-column: 1/-1;
-    z-index: 10;
-    align-self: center;
-    justify-self: end;
-    margin-right: calc(-5rem); }
-  .latest__arrow-box {
-    width: 10rem;
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(188, 192, 205, 0.2);
-    font-size: 3rem;
-    color: #fff;
-    cursor: pointer; }
-  .latest__arrow-box--left {
-    background-color: #80bfdb; }
-  .latest__arrow-box--right {
-    background-color: #97d1eb; }
   .latest__images-box {
     grid-row: 1/-1;
     grid-column: 1/-1;
     width: 100%;
-    height: auto; }
+    height: auto;
+    position: relative; }
+    .latest__images-box::before, .latest__images-box::after {
+      position: absolute;
+      width: 10rem;
+      height: 10rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgba(188, 192, 205, 0.2);
+      font-size: 3rem;
+      color: #fff;
+      cursor: pointer;
+      right: 0;
+      transform: translateX(5rem); }
+      @media only screen and (max-width: 75em) {
+        .latest__images-box::before, .latest__images-box::after {
+          transform: translateX(0); } }
+    .latest__images-box::before {
+      background-color: #80bfdb;
+      content: '<';
+      top: calc(50% - 10rem); }
+      @media only screen and (max-width: 75em) {
+        .latest__images-box::before {
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%); } }
+    .latest__images-box::after {
+      background-color: #97d1eb;
+      content: '>';
+      top: 50%; }
+      @media only screen and (max-width: 75em) {
+        .latest__images-box::after {
+          top: 50%;
+          transform: translateY(-50%); } }
   .latest__img {
     width: 100%;
     height: 100%;
