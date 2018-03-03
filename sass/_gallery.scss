@@ -5,6 +5,10 @@
   grid-template-columns: repeat(4, 25%);
   background-color: #000;
 
+  @include media(tab-port) {
+    display: none;
+  }
+  
   &__image {
     display: grid;
     align-items: center;

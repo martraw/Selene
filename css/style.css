@@ -331,6 +331,9 @@ body {
   height: 70vh;
   grid-template-columns: repeat(4, 25%);
   background-color: #000; }
+  @media only screen and (max-width: 56.25em) {
+    .gallery {
+      display: none; } }
   .gallery__image {
     display: grid;
     align-items: center;
