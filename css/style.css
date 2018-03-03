@@ -115,9 +115,15 @@ body {
     @media only screen and (max-width: 75em) {
       .header__leftColumn {
         grid-template-columns: [empty-end numbers-start] minmax(min-content, 35rem) [numbers-end]; } }
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 56.25em) {
       .header__leftColumn {
-        grid-template-columns: [numbers-start] minmax(min-content, 35rem) [numbers-end] 1fr [full-end]; } }
+        grid-row: 1/2;
+        grid-template-columns: minmax(min-content, 75%);
+        grid-template-rows: 1fr;
+        justify-self: center;
+        align-self: center;
+        margin-bottom: 3rem;
+        z-index: 5; } }
   .header__numbers {
     grid-column: numbers-start/numbers-end;
     padding: 2.5rem 1rem;
@@ -139,13 +145,18 @@ body {
         margin-left: 0; } }
     @media only screen and (max-width: 56.25em) {
       .header__headline {
-        display: none; } }
+        display: none;
+        grid-template-columns: 1/-1;
+        justify-content: center; } }
   .header__controls {
     display: grid;
     justify-items: center; }
     @media only screen and (max-width: 75em) {
       .header__controls {
         margin-left: 7.5rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__controls {
+        display: none; } }
   .header__arrow-box {
     width: 7.5rem;
     height: 7.5rem;
@@ -158,18 +169,6 @@ body {
     color: #bcc0cd;
     background-color: #fff;
     cursor: pointer; }
-  .header__arrow-box--mobile {
-    display: none; }
-    @media only screen and (max-width: 56.25em) {
-      .header__arrow-box--mobile {
-        display: flex;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%); }
-        .header__arrow-box--mobile-left {
-          left: 0; }
-        .header__arrow-box--mobile-right {
-          right: 0; } }
   .header__picture-number {
     width: 19rem;
     height: 19rem;
@@ -194,6 +193,13 @@ body {
     @media only screen and (max-width: 75em) {
       .header__title {
         font-size: 7rem; } }
+  .header__title--mobile {
+    display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .header__title--mobile {
+        display: inline-block;
+        font-size: 5rem;
+        border-bottom: 1.5rem solid #97d1eb; } }
   .header__list {
     display: flex;
     flex: 1;
@@ -221,6 +227,7 @@ body {
     background-color: #fff;
     cursor: pointer;
     position: absolute;
+    z-index: 10;
     top: 50%;
     transform: translateY(-50%); }
     @media only screen and (max-width: 56.25em) {
