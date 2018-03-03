@@ -208,6 +208,29 @@ body {
     grid-area: rightCol;
     grid-column: image-start/image-end;
     position: relative; }
+  .header__rightColumn::before, .header__rightColumn::after {
+    display: none;
+    width: 7.5rem;
+    height: 7.5rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(188, 192, 205, 0.2);
+    font-size: 3rem;
+    font-weight: 400;
+    color: #bcc0cd;
+    background-color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    @media only screen and (max-width: 56.25em) {
+      .header__rightColumn::before, .header__rightColumn::after {
+        display: flex; } }
+  .header__rightColumn::before {
+    content: '<'; }
+  .header__rightColumn::after {
+    content: '>';
+    right: 0; }
   .header__img {
     display: none; }
   .header__img--active {

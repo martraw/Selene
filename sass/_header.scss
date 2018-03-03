@@ -175,6 +175,38 @@
     position: relative;
   }
 
+  &__rightColumn::before,
+  &__rightColumn::after {
+    display: none;
+    width: 7.5rem;
+    height: 7.5rem;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba($gray-light, .2);
+    font-size: 3rem;
+    font-weight: 400;
+    color: $gray-light;
+    background-color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media(tab-port) {
+      display: flex;
+    }
+  }
+
+  &__rightColumn::before {
+    content: '<';
+  }
+
+  &__rightColumn::after {
+    content: '>';
+    right: 0;
+  }
+
   &__img {
     display: none;
   }
@@ -184,5 +216,5 @@
     width: 100%;
     height: 100%;
   }
- 
+
 }
