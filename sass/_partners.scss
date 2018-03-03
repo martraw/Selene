@@ -7,4 +7,9 @@
   // height: 20rem;
   padding: 10rem 0;
   grid-gap: 10rem;
+
+  @include media(tab-port) {
+    padding: 5rem 5rem;
+    grid-gap: 3rem;
+  }
 }

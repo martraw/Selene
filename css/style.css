@@ -592,6 +592,10 @@ body {
   align-items: center;
   padding: 10rem 0;
   grid-gap: 10rem; }
+  @media only screen and (max-width: 56.25em) {
+    .partners {
+      padding: 5rem 5rem;
+      grid-gap: 3rem; } }
 
 .contact {
   display: grid;
