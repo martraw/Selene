@@ -16,11 +16,14 @@
   }
   
   @include media(tab-land) {
+    grid-template-columns: minmax(min-content, 65%) minmax( 35%, 45%);
+    margin: 5rem 0;
+  }
+  
+  @include media(tab-port) {
     grid-template-columns: minmax(min-content, 1fr) ;
     grid-template-areas: "image"
                           "text";
-    margin-top: 5rem;
-    margin-bottom: 0;
   }
 
   &__textbox {
@@ -36,7 +39,11 @@
     }
 
     @include media (tab-land) {
-     margin-bottom: 5rem;
+      padding-right: 0;
+    }
+
+    @include media(tab-port) {
+      padding: 5rem;
     }
   }
 
@@ -85,7 +92,13 @@
     @include media (tab-land) {
       font-size: 7rem;
       text-align: center;
+      justify-self: start;
     }
+
+    @include media(tab-port) {
+      justify-self: center;
+    }
+
   }
   
   &__imgbox-content {
@@ -104,11 +117,22 @@
     bottom: 0;
     right: 0;
     z-index: 10;
+
+    @include media(tab-port) {
+      width: 75%;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include media(tab-port) {
+      margin-left: auto;
+      width: 75%;
+      // height: 100%;
+
+    }
   }
 
 }
