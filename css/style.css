@@ -95,7 +95,6 @@ body {
 
 .header {
   width: 100%;
-  min-height: 80rem;
   display: grid;
   grid-template-columns: [full-start] minmax(min-content, 59rem) [image-start] 1fr [image-end full-end];
   grid-template-areas: "leftCol rightCol";
@@ -194,6 +193,9 @@ body {
     @media only screen and (max-width: 75em) {
       .header__title {
         font-size: 7rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__title {
+        font-size: 5.5rem; } }
   .header__title--mobile {
     display: none; }
     @media only screen and (max-width: 56.25em) {

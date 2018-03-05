@@ -1,6 +1,6 @@
 .header {
   width: 100%;
-  min-height: 80rem;
+  // min-height: 80rem;
   display: grid;
   grid-template-columns: [full-start]  minmax(min-content, 59rem) [image-start]  1fr [image-end full-end];
   grid-template-areas:  "leftCol rightCol";
@@ -132,6 +132,10 @@
 
     @include media (tab-land) {
       font-size: 7rem;
+    }
+
+    @include media(phone-l) {
+      font-size: 5.5rem;
     }
   }
 
