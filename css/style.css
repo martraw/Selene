@@ -317,6 +317,7 @@ body {
         justify-self: start; } }
     @media only screen and (max-width: 56.25em) {
       .ideas__imgbox-heading {
+        font-size: 6rem;
         justify-self: center; } }
   .ideas__imgbox-content {
     grid-row: 1/-1;
@@ -335,6 +336,9 @@ body {
     @media only screen and (max-width: 56.25em) {
       .ideas__rectangle {
         width: 75%; } }
+    @media only screen and (max-width: 37.5em) {
+      .ideas__rectangle {
+        width: 50%; } }
   .ideas__img {
     display: block;
     width: 100%; }
@@ -342,6 +346,9 @@ body {
       .ideas__img {
         margin-left: auto;
         width: 75%; } }
+    @media only screen and (max-width: 37.5em) {
+      .ideas__img {
+        width: 50%; } }
 
 .gallery {
   display: grid;

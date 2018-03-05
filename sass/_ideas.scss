@@ -96,6 +96,7 @@
     }
 
     @include media(tab-port) {
+      font-size: 6rem;
       justify-self: center;
     }
 
@@ -121,6 +122,10 @@
     @include media(tab-port) {
       width: 75%;
     }
+
+    @include media(phone-l) {
+      width: 50%
+    }
   }
 
   &__img {
@@ -131,7 +136,10 @@
       margin-left: auto;
       width: 75%;
       // height: 100%;
+    }
 
+    @include media(phone-l) {
+      width: 50%
     }
   }
 
