@@ -8,16 +8,21 @@
   border-bottom: 1px solid rgba($gray-light, .2);
 
   @include media(tab-land) {
-  grid-template-columns: auto minmax(min-content,1fr) auto;
-    
+    grid-template-columns: auto minmax(min-content,1fr) auto;
+    height: 10rem;
   }
 
   &__logo {
-    display: inline-block;
+    display: block;
     margin-left: 5rem;
-    justify-self: start;
     width: 15rem;
     height: auto;
+
+    @include media(tab-port) {
+      width: 10rem;
+      margin-left: 0;
+      padding: 0 1.5rem;
+    }
   }
 
   &__list {
@@ -35,7 +40,7 @@
     @include media(tab-land) {
     justify-self: center;
         
-      }
+    }
   }
   
   &__listItem {
@@ -68,13 +73,17 @@
 
 
   &__search {
-    display: inline-block;
-    justify-self: end;
+    display: block;
     margin-right: 5rem;
+
+    @include media(tab-port) {
+      margin-right: 0;
+      padding: 0 1rem;
+    }
   }
 
   &__searchIcon {
-    display: inline-block;
+    display: block;
     width: 2.8rem;
     height: auto;
   } 

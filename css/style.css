@@ -49,13 +49,18 @@ body {
   border-bottom: 1px solid rgba(188, 192, 205, 0.2); }
   @media only screen and (max-width: 75em) {
     .navbar {
-      grid-template-columns: auto minmax(min-content, 1fr) auto; } }
+      grid-template-columns: auto minmax(min-content, 1fr) auto;
+      height: 10rem; } }
   .navbar__logo {
-    display: inline-block;
+    display: block;
     margin-left: 5rem;
-    justify-self: start;
     width: 15rem;
     height: auto; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar__logo {
+        width: 10rem;
+        margin-left: 0;
+        padding: 0 1.5rem; } }
   .navbar__list {
     display: grid;
     justify-content: space-between;
@@ -85,11 +90,14 @@ body {
     color: #000;
     transform: scale(1.05); }
   .navbar__search {
-    display: inline-block;
-    justify-self: end;
+    display: block;
     margin-right: 5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar__search {
+        margin-right: 0;
+        padding: 0 1rem; } }
   .navbar__searchIcon {
-    display: inline-block;
+    display: block;
     width: 2.8rem;
     height: auto; }
 
