@@ -629,6 +629,11 @@ body {
       .contact__container {
         width: 95vw;
         height: auto; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact__container {
+        width: 100vw;
+        background-position: center;
+        background-size: 100%; } }
   .contact__content {
     justify-self: center;
     align-self: center;
@@ -637,15 +642,27 @@ body {
     border: 2rem solid #97d1eb;
     display: grid;
     grid-template-columns: 60% 40%; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__content {
+        grid-template-columns: 1fr;
+        background: rgba(255, 255, 255, 0.95); } }
   .contact__form {
     display: grid;
     grid-auto-flow: row;
     align-items: center;
     align-content: center;
     margin: 10% 0; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__form {
+        width: 75%;
+        justify-self: center; } }
   .contact__form-header {
     height: 10rem;
     display: flex; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__form-header {
+        height: 7rem;
+        justify-content: center; } }
   .contact__list {
     list-style: none;
     color: #bcc0cd;
@@ -654,6 +671,9 @@ body {
     letter-spacing: 0.4rem;
     display: inline-block;
     margin-left: 9rem; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__list {
+        margin-left: 0; } }
   .contact__list-item {
     display: inline-block; }
   .contact__list-item:not(:last-child) {
@@ -668,6 +688,9 @@ body {
     background-color: #97d1eb; }
   .contact__form-group {
     padding-bottom: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__form-group {
+        padding-bottom: 3rem; } }
   .contact__input, .contact__textarea {
     width: 80%;
     font-size: 3.6rem;
@@ -677,6 +700,11 @@ body {
     border: none;
     border-bottom: 1px solid #bcc0cd;
     margin-left: 9rem; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__input, .contact__textarea {
+        width: 100%;
+        font-size: 2.8rem;
+        margin-left: 0; } }
   .contact__textarea {
     font-size: 2.4rem; }
   .contact__input:focus, .contact__textarea:focus {
@@ -697,6 +725,9 @@ body {
     font-size: 1.6rem;
     transition: all .1s;
     color: #bcc0cd; }
+    @media only screen and (max-width: 56.25em) {
+      .contact__label {
+        margin-left: 0; } }
   .contact__input:placeholder-shown + .contact__label {
     opacity: 0;
     visibility: hidden;

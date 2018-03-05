@@ -17,6 +17,12 @@
       width: 95vw; 
       height: auto;
       }
+
+      @include media(tab-port) {
+        width: 100vw;
+        background-position: center;
+        background-size: 100%;
+      }
   }
 
   &__content {
@@ -28,6 +34,11 @@
 
     display: grid;
     grid-template-columns: 60% 40%;
+
+    @include media(tab-port) {
+      grid-template-columns: 1fr;
+      background: rgba(#fff,.95)
+    }
     
   }
 
@@ -37,12 +48,21 @@
     align-items: center;
     align-content: center;
     margin: 10% 0;
+
+    @include media(tab-port) {
+      width: 75%;
+      justify-self: center;
+    }
   }
 
   &__form-header {
     height: 10rem;
     display: flex;
     
+    @include media(tab-port) {
+      height: 7rem;
+      justify-content: center;
+    }
   }
 
   &__list {
@@ -53,6 +73,10 @@
     letter-spacing: 0.4rem;
     display: inline-block;
     margin-left: 9rem;
+
+    @include media(tab-port) {
+      margin-left: 0;
+    }
   }
 
   &__list-item {
@@ -77,6 +101,10 @@
 
   &__form-group {
     padding-bottom: 4rem;
+
+    @include media(tab-port) {
+     padding-bottom: 3rem;
+    }
   }
 
   &__input, &__textarea {
@@ -88,6 +116,12 @@
     border: none;
     border-bottom: 1px solid $gray-light;
     margin-left: 9rem;
+
+    @include media(tab-port) {
+      width: 100%;
+      font-size: 2.8rem;
+      margin-left: 0;
+    }
   }
 
   &__textarea {
@@ -122,6 +156,10 @@
     font-size: 1.6rem;
     transition: all .1s;
     color: $gray-light;
+
+    @include media(tab-port) {
+      margin-left: 0;
+    }
   }
 
   &__input:placeholder-shown + &__label {
