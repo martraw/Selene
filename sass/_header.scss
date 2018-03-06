@@ -37,6 +37,12 @@
       margin-bottom: 3rem;
       z-index: 5;
     }
+
+    @include media(phone-l) {
+      align-self: end;
+      margin-bottom: 1.5rem;
+    }
+
   }
 
   &__numbers {
@@ -134,18 +140,20 @@
       font-size: 7rem;
     }
 
-    @include media(phone-l) {
-      font-size: 5.5rem;
-    }
   }
-
+  
   &__title--mobile {
     display: none;
-
+    
     @include media(tab-port) {
       display: inline-block;
       font-size: 5rem;
       border-bottom: 1.5rem solid $blue;
+    }
+
+    @include media(phone-l) {
+      font-size: 3rem;
+      border-bottom: 1rem solid $blue;
     }
   }
 
