@@ -51,6 +51,10 @@ body {
     .navbar {
       grid-template-columns: auto minmax(min-content, 1fr) auto;
       height: 10rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .navbar {
+      grid-template-columns: minmax(min-content, 1fr) auto;
+      height: auto; } }
   .navbar__logo {
     display: block;
     margin-left: 5rem;
@@ -58,9 +62,14 @@ body {
     height: auto; }
     @media only screen and (max-width: 56.25em) {
       .navbar__logo {
-        width: 10rem;
         margin-left: 0;
         padding: 0 1.5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .navbar__logo {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        margin-top: 1rem;
+        padding: 0; } }
   .navbar__list {
     display: grid;
     justify-content: space-between;
@@ -74,6 +83,11 @@ body {
     @media only screen and (max-width: 75em) {
       .navbar__list {
         justify-self: center; } }
+    @media only screen and (max-width: 37.5em) {
+      .navbar__list {
+        grid-column: 1/-1;
+        padding-right: 0;
+        margin: 1rem 0; } }
   .navbar__listItem {
     line-height: 3rem;
     display: flex;
@@ -96,6 +110,10 @@ body {
       .navbar__search {
         margin-right: 0;
         padding: 0 1rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .navbar__search {
+        grid-column: 2/3;
+        grid-row: 1/2; } }
   .navbar__searchIcon {
     display: block;
     width: 2.8rem;

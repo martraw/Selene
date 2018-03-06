@@ -1,7 +1,6 @@
 .navbar {
   height: 17rem;
   display: grid;
-  // grid-template-columns: auto 1fr auto;
   grid-template-columns: minmax(min-content, 59rem) minmax(min-content,1fr) auto;
   align-items: center;
   justify-items: center;
@@ -12,6 +11,11 @@
     height: 10rem;
   }
 
+  @include media(phone-l) {
+    grid-template-columns:  minmax(min-content,1fr) auto;
+    height: auto;
+  }
+
   &__logo {
     display: block;
     margin-left: 5rem;
@@ -19,9 +23,15 @@
     height: auto;
 
     @include media(tab-port) {
-      width: 10rem;
       margin-left: 0;
       padding: 0 1.5rem;
+    }
+
+    @include media(phone-l) {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      margin-top: 1rem;
+      padding: 0;
     }
   }
 
@@ -38,8 +48,13 @@
     list-style: none;
 
     @include media(tab-land) {
-    justify-self: center;
-        
+      justify-self: center;
+    }
+
+    @include media(phone-l) {
+      grid-column: 1/-1;
+      padding-right: 0;
+      margin: 1rem 0;
     }
   }
   
@@ -80,6 +95,12 @@
       margin-right: 0;
       padding: 0 1rem;
     }
+
+    @include media(phone-l) {
+     grid-column: 2/3;
+     grid-row: 1/2; 
+    }
+
   }
 
   &__searchIcon {
