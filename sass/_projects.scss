@@ -41,6 +41,10 @@
     @include media(tab-port) {
       width: 10rem;
     }
+
+    @include media(phone-l) {
+      display: none;
+    }
   }
 
   &__content {
@@ -165,6 +169,10 @@
 
     @include media(tab-port) {
       width: 10rem;
+    }
+
+    @include media(phone-l) {
+      display: none;
     }
   }
 

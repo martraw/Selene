@@ -454,6 +454,9 @@ body {
     @media only screen and (max-width: 56.25em) {
       .work__title::before, .work__title::after {
         width: 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .work__title::before, .work__title::after {
+        display: none; } }
   .work__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
@@ -528,6 +531,9 @@ body {
     @media only screen and (max-width: 56.25em) {
       .latest__title::before, .latest__title::after {
         width: 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .latest__title::before, .latest__title::after {
+        display: none; } }
   .latest__slider {
     grid-area: slider;
     display: grid; }
