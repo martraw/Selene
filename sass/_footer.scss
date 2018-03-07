@@ -8,6 +8,11 @@
   color: $gray;
   font-size: 1.4rem;
 
+  @include media(tab-port) {
+    height: auto;
+    padding: 2rem 0;
+  }
+
   span {
     font-size: 1.8rem;
     padding-top: 1rem;

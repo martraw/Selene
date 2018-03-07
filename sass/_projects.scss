@@ -227,6 +227,18 @@
         transform: translateX(0);
         
       }
+
+      @include media(tab-port) {
+        width: 7.5rem;
+        height: 7.5rem;
+      }
+
+      @include media(phone-l) {
+        width: 5rem;
+        height: 5rem;
+        font-size: 2rem;
+      }
+
     }
 
     &::before {
@@ -318,11 +330,36 @@
     padding: 1.5rem 4rem;
     border: 1px solid $gray;
     justify-self: start;
+    font-family: Montserrat;
+    font-size: 1.4rem;
+    line-height: 4.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:link,
+    &:visited,
+    {
+      text-decoration: none;
+      color:  $gray;
+    }
+
+    &:active,
+    &:hover {
+      transform: scale(1.05);
+    }
     
     @include media(tab-land) {
       grid-column: 1/-1;
       justify-self: center;
+      padding: 1rem 2rem;
       margin-bottom: 2rem;
+    }
+
+    @include media(tab-port) {
+      font-size: 1.2rem;
     }
   }
 

@@ -201,6 +201,13 @@
     @include media(tab-port) {
       display: flex;
     }
+
+    @include media(phone-l) {
+      width: 5rem;
+      height: 5rem;
+      font-size: 2rem;
+    }
+
   }
 
   &__rightColumn::before {

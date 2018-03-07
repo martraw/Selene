@@ -2,78 +2,67 @@
   display: grid;
   justify-content: center;
   margin-bottom: 7rem;
+  @include media (tab-port) {
+    margin-bottom: 0;
+  }
 
   &__container {
     width: 153rem;
     height: 96rem;
-
     display: grid;
     background: url(../img/form-img.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 40% 100%;
-
     @include media(laptop) {
-      width: 95vw; 
+      width: 95vw;
       height: auto;
-      }
-
-      @include media(tab-port) {
-        width: 100vw;
-        background-position: center;
-        background-size: 100%;
-      }
+    }
+    @include media(tab-port) {
+      width: 100vw;
+      background-position: center;
+      background-size: 100%;
+    }
   }
-
   &__content {
     justify-self: center;
     align-self: center;
     width: 95%;
     height: 95%;
     border: 2rem solid $blue;
-
     display: grid;
     grid-template-columns: 60% 40%;
-
     @include media(tab-port) {
       grid-template-columns: 1fr;
-      background: rgba(#fff,.95)
+      background: rgba(#fff, .95)
     }
-
     @include media(phone-l) {
       width: 100%;
       height: 100%;
     }
-    
   }
-
   &__form {
     display: grid;
     grid-auto-flow: row;
     align-items: center;
     align-content: center;
     margin: 10% 0;
-
     @include media(tab-port) {
       width: 75%;
       justify-self: center;
     }
-
     @include media(phone-l) {
       width: 90%;
     }
   }
-
   &__form-header {
     height: 10rem;
     display: flex;
-    
     @include media(tab-port) {
       height: 7rem;
       justify-content: center;
     }
   }
-
   &__list {
     list-style: none;
     color: $gray-light;
@@ -82,24 +71,22 @@
     letter-spacing: 0.4rem;
     display: inline-block;
     margin-left: 9rem;
-
     @include media(tab-port) {
       margin-left: 0;
     }
   }
-
   &__list-item {
     display: inline-block
   }
-
   &__list-item:not(:last-child) {
     padding-right: 4rem;
+    @include media(phone-l) {
+      padding-right: 2rem;
+    }
   }
-
   &__list-item--active {
     color: $green;
   }
-
   &__list-item--active::after {
     display: block;
     content: "";
@@ -107,16 +94,14 @@
     height: 2px;
     background-color: $green;
   }
-
   &__form-group {
     padding-bottom: 4rem;
-
     @include media(tab-port) {
-     padding-bottom: 3rem;
+      padding-bottom: 3rem;
     }
   }
-
-  &__input, &__textarea {
+  &__input,
+  &__textarea {
     width: 80%;
     font-size: 3.6rem;
     font-family: inherit;
@@ -125,39 +110,33 @@
     border: none;
     border-bottom: 1px solid $gray-light;
     margin-left: 9rem;
-
     @include media(tab-port) {
       width: 100%;
       font-size: 2.8rem;
       margin-left: 0;
     }
   }
-
   &__textarea {
     font-size: 2.4rem;
   }
-
-  &__input:focus, &__textarea:focus {
+  &__input:focus,
+  &__textarea:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(black, .1);
   }
-
   &__input:focus:invalid {
     border-bottom: 1px solid red;
   }
-
   &__input:focus:valid {
     border-bottom: 1px solid green;
   }
-  
-  &__input::placeholder, &__textarea::placeholder {
+  &__input::placeholder,
+  &__textarea::placeholder {
     color: $gray-light;
   }
-
   &__input::-webkit-input-placeholder {
     color: $gray-light;
   }
-  
   &__label {
     margin-left: 9rem;
     margin-top: 1rem;
@@ -165,23 +144,20 @@
     font-size: 1.6rem;
     transition: all .1s;
     color: $gray-light;
-
     @include media(tab-port) {
       margin-left: 0;
     }
   }
-
-  &__input:placeholder-shown + &__label {
+  &__input:placeholder-shown+&__label {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-4rem);
   }
-
   &__btn {
     justify-self: center;
     width: 18rem;
     height: 5rem;
-    border:1px solid $gray-light;
+    border: 1px solid $gray-light;
     background-color: #fff;
     color: $gray;
     font-family: Montserrat;
@@ -190,11 +166,11 @@
     text-transform: uppercase;
     letter-spacing: 0.4rem;
     cursor: pointer;
+    transition: all .3s;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
-
-
-
-
   &__border {
     grid-column: 1/-1;
     grid-row: 1/-1;
