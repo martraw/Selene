@@ -1,9 +1,5 @@
 .projects {
   display: grid;
-
-  // min-height: 100Vh; //Tymczasowo
-
-
   background-image:  linear-gradient(180deg, rgba(255,255,255, 1) 0%, rgba(255,255,255, .99) 15%, rgba(255,255,255, .98) 30%), url('../img/background-large.jpg');
   background-size: cover;
   background-position: center;
@@ -11,8 +7,6 @@
 
 .work {
   display: grid;
-  // height: 25rem;
-  // align-content: center;
 
   &__title {
     justify-self: center;
@@ -23,7 +17,6 @@
     grid-auto-flow: column;
     grid-column-gap: 2rem;
     align-items: center;
-    
     font-size: 1.6rem;
     color: $green;
     letter-spacing: 0.4rem;
@@ -35,9 +28,7 @@
 
      @include media(phone-l) {
       padding: 3rem 0;
-       
      }
-  
   }
 
   &__title::before,
@@ -62,7 +53,6 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
     grid-gap: 3rem;
     justify-content: center;
-
   }
 
   &__box {
@@ -71,8 +61,6 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-
-    
   }
 
   &__box-text {
@@ -111,9 +99,7 @@
 .latest {
   min-height: 50rem;
   display: grid;
-  // grid-template-columns: [full-start] 1fr [middle-start]  minmax(min-content, 150rem) [middle-end] 1fr [full-end];
   grid-template-columns: [full-start] 1fr [middle-start]  5fr[middle-middle] 5fr [middle-end] 1fr [full-end];
-  
   grid-template-rows: max-content max-content auto;
   
   grid-template-areas: 'title title title title'
@@ -153,17 +139,13 @@
   
   &__title {
     grid-area: title;
-    // grid-column: middle-start/middle-end;
-    // grid-row: 1/2;
     justify-self: center;
-    // grid-column: 1/-1;
     padding: 10rem;
 
     display: grid;
     grid-auto-flow: column;
     grid-column-gap: 2rem;
     align-items: center;
-    
     font-size: 1.6rem;
     color: $green;
     letter-spacing: 0.4rem;
@@ -172,8 +154,6 @@
     @include media(tab-port) {
       padding: 5rem;
      }
-
-     @include media(phone-l) {}
   }
 
   &__title::before,
@@ -196,8 +176,6 @@
 
   &__slider {
     grid-area: slider;
-    // grid-column: full-start/middle-middle;
-    // grid-row: 2/3;
     display: grid;
   }
 
@@ -225,7 +203,6 @@
 
       @include media(tab-land) {
         transform: translateX(0);
-        
       }
 
       @include media(tab-port) {
@@ -263,7 +240,6 @@
         transform: translateY(-50%);
       }
     }
-
   }
 
   &__img {
@@ -278,8 +254,6 @@
 
   &__project-description {
     grid-area: description;
-    // grid-column: middle-middle/middle-end;
-    // grid-row: 2/3;
     display: grid;
     grid-row-gap: 2rem;
     align-content: center;
@@ -319,11 +293,11 @@
 
       @include media(laptop) {
         padding-right: 5rem;  
-        }
+      }
 
-        @include media(tab-land) {
-          padding-right: 0;
-        }
+      @include media(tab-land) {
+        padding-right: 0;
+      }
   }
 
   &__project-link {
