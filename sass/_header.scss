@@ -193,44 +193,6 @@
     position: relative;
   }
 
-  // &__rightColumn::before,
-  // &__rightColumn::after {
-  //   display: none;
-  //   width: 7.5rem;
-  //   height: 7.5rem;
-  //   justify-content: center;
-  //   align-items: center;
-  //   border: 1px solid rgba($gray-light, .2);
-  //   font-size: 3rem;
-  //   font-weight: 400;
-  //   color: $gray-light;
-  //   background-color: #fff;
-  //   cursor: pointer;
-  //   position: absolute;
-  //   z-index: 10;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-
-  //   @include media(tab-port) {
-  //     display: flex;
-  //   }
-
-  //   @include media(phone-l) {
-  //     width: 5rem;
-  //     height: 5rem;
-  //     font-size: 2rem;
-  //   }
-  // }
-
-  // &__rightColumn::before {
-  //   content: '<';
-  // }
-
-  // &__rightColumn::after {
-  //   content: '>';
-  //   right: 0;
-  // }
-
   &__img {
     display: none;
     width: 100%;

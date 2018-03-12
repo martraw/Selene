@@ -49,9 +49,6 @@
   }
 
   &__content {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
-    // grid-gap: 3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -188,61 +185,6 @@
     width: 100%;
     height: auto;
     position: relative;
-
-    &::before,
-    &::after {
-      position: absolute;
-      width: 10rem;
-      height: 10rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid rgba($gray-light, .2);
-      font-size: 3rem;
-      color: #fff;
-      cursor: pointer;
-      right: 0;
-      transform: translateX(5rem);
-
-      @include media(tab-land) {
-        transform: translateX(0);
-      }
-
-      @include media(tab-port) {
-        width: 7.5rem;
-        height: 7.5rem;
-      }
-
-      @include media(phone-l) {
-        width: 5rem;
-        height: 5rem;
-        font-size: 2rem;
-      }
-
-    }
-
-    &::before {
-      background-color: #80bfdb;
-      content: '<';
-      top: calc(50% - 10rem);
-      
-      @include media(tab-land) {
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-
-    &::after {
-      background-color: #97d1eb;
-      content: '>';
-      top: 50%;
-
-      @include media(tab-land) {
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
   }
 
   &__arrow-box {
@@ -276,7 +218,6 @@
 
     &--left {
       background-color: #80bfdb;
-      // content: '<';
       top: calc(50% - 10rem);
       
       @include media(tab-land) {
@@ -288,7 +229,6 @@
 
     &--right {
       background-color: #97d1eb;
-      // content: '>';
       top: 50%;
   
       @include media(tab-land) {
@@ -297,8 +237,6 @@
       }
     }
   }
-
-
 
   &__img {
     width: 100%;
