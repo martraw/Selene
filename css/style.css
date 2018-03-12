@@ -199,6 +199,21 @@ body {
     color: #bcc0cd;
     background-color: #fff;
     cursor: pointer; }
+  .header__arrow-mobile {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    .header__arrow-mobile--right {
+      right: 0; }
+    @media only screen and (max-width: 56.25em) {
+      .header__arrow-mobile {
+        display: flex; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__arrow-mobile {
+        width: 5rem;
+        height: 5rem;
+        font-size: 2rem; } }
   .header__picture-number {
     width: 19rem;
     height: 19rem;
@@ -248,37 +263,10 @@ body {
     grid-area: rightCol;
     grid-column: image-start/image-end;
     position: relative; }
-  .header__rightColumn::before, .header__rightColumn::after {
-    display: none;
-    width: 7.5rem;
-    height: 7.5rem;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(188, 192, 205, 0.2);
-    font-size: 3rem;
-    font-weight: 400;
-    color: #bcc0cd;
-    background-color: #fff;
-    cursor: pointer;
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    transform: translateY(-50%); }
-    @media only screen and (max-width: 56.25em) {
-      .header__rightColumn::before, .header__rightColumn::after {
-        display: flex; } }
-    @media only screen and (max-width: 37.5em) {
-      .header__rightColumn::before, .header__rightColumn::after {
-        width: 5rem;
-        height: 5rem;
-        font-size: 2rem; } }
-  .header__rightColumn::before {
-    content: '<'; }
-  .header__rightColumn::after {
-    content: '>';
-    right: 0; }
   .header__img {
-    display: none; }
+    display: none;
+    width: 100%;
+    height: 100%; }
   .header__img--active {
     display: block;
     width: 100%;
@@ -482,16 +470,16 @@ body {
       .work__title::before, .work__title::after {
         display: none; } }
   .work__content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
-    grid-gap: 3rem;
-    justify-content: center; }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
   .work__box {
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
     justify-items: center;
-    align-items: center; }
+    align-items: center;
+    margin: 0 3rem; }
   .work__box-text {
     font-size: 6rem;
     grid-column: 1/-1;
