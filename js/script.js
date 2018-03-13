@@ -1,4 +1,5 @@
- /* Header slider object */
+document.addEventListener('DOMContentLoaded', () => {
+/* Header slider object */
  const headerSlider = {
    images: document.querySelectorAll('.header__img'),
    controls: document.querySelectorAll('.header__arrow-box'),
@@ -82,3 +83,5 @@
 
  imageSlider.startSlide(headerSlider);
  imageSlider.startSlide(projectsSlider);
+
+});
