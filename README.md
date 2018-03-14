@@ -1,6 +1,9 @@
 # Selene
 Landing page based on free PSD template created in order to practice Css grid layout.
+
 Colors, fonts and elements dimensions consistent with the design.
+
+[Live peview](https://martraw.github.io/Selene/)
 
 *Technologies used: HTML, Css/Sass, JavaScript.*
 
