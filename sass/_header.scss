@@ -36,7 +36,7 @@
     }
 
     @include media(phone-l) {
-      align-self: end;
+      // align-self: end;
       margin-bottom: 1.5rem;
     }
   }
@@ -97,6 +97,7 @@
     color: $gray-light;
     background-color: #fff;
     cursor: pointer;
+
   }
   
   &__arrow-mobile {
@@ -104,6 +105,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
 
     &--right {
       right: 0;
@@ -162,6 +164,8 @@
     @include media(tab-port) {
       display: inline-block;
       font-size: 5rem;
+      padding: 2rem;
+      background: rgba(#fff,.7);
       border-bottom: 1.5rem solid $blue;
     }
 
