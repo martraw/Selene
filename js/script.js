@@ -33,20 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
    },
    /* Add click event to slider controls */
    addClick: function (obj) {
+     /* Arrows */
      obj.controls.forEach(arrow => {
        arrow.addEventListener('click', e => {
          this.slide(e, obj);
        })
      })
 
+     /* Caption */
      obj.caption.forEach((elem, elemIndex) => {
        elem.addEventListener('click', e => {
-         console.log(elemIndex);
          this.slideCaption(obj, elemIndex);
        })
      })
    },
-   /* Handles click event and image change */
+   /* Handle arrow  click event and image change */
    slide: function (e, obj) {
      this.reset(obj);
      if (e.target.classList.contains('arrow--right')) {
@@ -73,16 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
      }
    },
 
+   /* Handle caption  click event and image change */
    slideCaption: function (obj, elemIndex) {
      this.reset(obj);
 
      obj.index = elemIndex;
-
      obj.images[obj.index].style.display = 'block';
      obj.caption[obj.index].classList.add(obj.activeCLassName);
-     this.pictureNum(obj);
 
+     this.pictureNum(obj);
    },
+
    /* Handle large picture number in header slider */
    pictureNum: function (obj) {
      if (obj.pictureNum) {
