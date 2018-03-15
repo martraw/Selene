@@ -80,6 +80,7 @@
     align-self: center;
     font-size: 9.2rem;
     letter-spacing: 0.23rem;
+    position: relative;
     z-index: 15;
 
     @include media (laptop) {
