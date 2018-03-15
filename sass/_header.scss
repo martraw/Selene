@@ -187,6 +187,7 @@
 
   &__listItem {
     display: inline-block;
+    cursor: pointer;
   }
 
   &__listItem--active {

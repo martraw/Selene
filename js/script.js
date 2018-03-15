@@ -35,7 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
    addClick: function (obj) {
      obj.controls.forEach(arrow => {
        arrow.addEventListener('click', e => {
-         this.slide(e, obj)
+         this.slide(e, obj);
+       })
+     })
+
+     obj.caption.forEach((elem, elemIndex) => {
+       elem.addEventListener('click', e => {
+         console.log(elemIndex);
+         this.slideCaption(obj, elemIndex);
        })
      })
    },
@@ -64,6 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
        obj.caption[obj.index].classList.add(obj.activeCLassName);
        this.pictureNum(obj);
      }
+   },
+
+   slideCaption: function (obj, elemIndex) {
+     this.reset(obj);
+
+     obj.index = elemIndex;
+
+     obj.images[obj.index].style.display = 'block';
+     obj.caption[obj.index].classList.add(obj.activeCLassName);
+     this.pictureNum(obj);
+
    },
    /* Handle large picture number in header slider */
    pictureNum: function (obj) {

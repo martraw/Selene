@@ -361,6 +361,7 @@
     width: 22rem;
     height: 14rem;
     position: relative;
+    cursor: pointer;
 
     @include media(tab-port) {
       width: 18rem;
